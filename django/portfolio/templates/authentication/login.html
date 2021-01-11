@@ -1,0 +1,53 @@
+{% extends 'layouts.html' %} {% block title %} Login Page {% endblock %} {% block content %}
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="text-center">Login Your Account</h2>
+        </div>
+
+    </div>
+</section>
+<!-- End Breadcrumbs -->
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="row mt-5 justify-content-center" data-aos="fade-up">
+            <div class="col-lg-4">
+                <h4 class="text-center">Login Your Account</h4>
+                <!--https://simpleisbetterthancomplex.com/tips/2016/09/06/django-tip-14-messages-framework.html-->
+                <hr> {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button> {{ message }}
+                </div>
+                {% endfor %}
+
+                <!--form action="contact" method="post" role="form" class="php-email-form"-->
+                <form action="" method="post" role="form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="User Name" />
+                        <div class="validate"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                        <div class="validate"></div>
+                    </div>
+                    <small>Forgot my <a href="{% url 'forgotpassword'%}">password!</a></small>
+                    <div class="text-center"><br>
+                        <button type="submit" class="btn btn-success btn-block">Login</button>
+                    </div>
+                </form><br>
+                <small>Don't have an Account <a href="{% url 'registraton'%}">Register Now!</a></small>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- End Contact Section -->
+{% endblock %}

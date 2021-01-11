@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>Method -1: {{ getRandomNumber() }}</p>
+        <p>Method -2: {{ getRandomNumber() }}</p>
+        <p>Method -3: {{ getRandomNumber() }}</p>
+        <hr>
+        <!-- calling computed properties no need to use () -->
+        <p>Computed -1: {{ getRandomComputed }}</p>
+        <p>Computed -2: {{ getRandomComputed }}</p>
+        <p>Computed -3: {{ getRandomComputed }}</p>
+        <br>
+        <h3>Full Name: {{ fullName }}</h3>
+        <h3>Reversed Full Name: {{ reversedFullName }}</h3>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="main.js"></script>
+</body>
+</html>

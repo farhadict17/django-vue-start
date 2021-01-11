@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div id="app">
+        <h1> User List</h1>
+        <div class="card" 
+            v-for="user in users"
+            :key="user.id">
+            <div class="card-body">
+                <p><strong>Name:</strong> {{user.name}}</p>
+                <p><strong>Profession:</strong> {{user.profession}}</p>
+            </div>
+        </div>
+        <!-- <ul> -->
+            <!-- <li v-for="ali in users">{{ ali }}</li> -->
+            <!-- <li v-for="user in users">{{user}}</li> -->
+        <!-- </ul>
+        <hr>
+        <p>Numbers from 1 to 10</p>
+        <p v-for="number in 10">{{number}}</p> -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="main.js"></script>
+</body>
+</html>

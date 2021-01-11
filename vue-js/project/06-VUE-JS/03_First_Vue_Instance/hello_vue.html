@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello vue</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{message}}</h1>
+        <!-- using v-text or {{}} is the same thing -->
+        <h1 v-text="message"></h1>
+        <h2>{{value}}</h2>
+        <h2>{{value * 5}}</h2>
+        <h2>{{ "Hello" + "Vue!"}}</h2>
+        <h2>{{ (33/11) * 5 }}</h2>
+        <h2>{{ Math.random()  }}</h2>
+        <h2>{{ "Farhad".split('').reverse().join('') }}</h2>
+        <!-- <img v-bind:src="imgSrc" alt=""><br> -->
+        <!-- <a v-bind:href="link">Vue installation process</a> -->
+        <!-- instead of using v-bind just use : -->
+        <img :src="imgSrc" alt="">
+        <a :href="link">Vue installation process</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
